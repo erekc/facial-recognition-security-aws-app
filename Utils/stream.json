@@ -1,0 +1,20 @@
+{
+       "Name": "face-rekog-processor",
+       "Input": {
+              "KinesisVideoStream": {
+                     "Arn": "<KINESIS_VIDEO_STREAM_ARN>
+              }
+       },
+       "Output": {
+              "KinesisDataStream": {
+                     "Arn": "<KINESIS_DATA_STREAM_ARN>"
+              }
+       },
+       "RoleArn": "<REKOGNITION_ROLE_ARN>",
+       "Settings": {
+              "FaceSearch": {
+                     "CollectionId": "<COLLECTION_ID>",
+                     "FaceMatchThreshold": 85.5
+              }
+       }
+}
