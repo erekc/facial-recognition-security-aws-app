@@ -205,7 +205,7 @@ class KinesisHandler:
             + "FaceId: {}\n".format(indexed_face_id)\
             + "URL: {}\n".format(new_face_url)\
             + "Use link to approve: {}".format(link)
-        sns.publish(PhoneNumber="+14049189495", Message=msg)
+        sns.publish(PhoneNumber="<phone_number>", Message=msg)
         topic = boto3.resource("sns").Topic("arn:aws:sns:us-west-2:<AccountId>:LF1")
         topic.publish(Message=msg)
         
